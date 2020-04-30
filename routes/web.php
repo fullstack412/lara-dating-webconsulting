@@ -19,7 +19,9 @@ Route::get('/contact', 'HomeController@contact');
 Route::get('/terms', 'HomeController@terms');
 Route::get('/users-guide', 'HomeController@usersguide');
 
-Route::get('/members', 'MembersController@index');
+Route::group(['middleware' => ['auth']], function() {
+    Route::get('/members', 'MembersController@index');
+});
 
 Route::get('/login', 'LoginController@index');
 Route::post('/login', 'LoginController@checklogin');
