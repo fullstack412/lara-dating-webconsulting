@@ -23,7 +23,7 @@ Route::group(['middleware' => ['auth']], function() {
     Route::get('/members', 'MembersController@index');
 });
 
-Route::get('/login', 'LoginController@index');
+Route::get('/login', ['as' => 'login', 'uses' => 'LoginController@index']);
 Route::post('/login', 'LoginController@checklogin');
 Route::get('/logout', 'LoginController@logout');
 Route::get('/register', 'LoginController@register');
