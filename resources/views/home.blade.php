@@ -67,7 +67,7 @@
                             <button type="submit"></button>
                         </form>
                     </div>
-                    <a class="resp-icon"><i class="far fa-bars"></i></a>
+                    <a class="resp-icon"><i class="fas fa-bars"></i></a>
                 </div>
                 <div class="user-menu">
                     <a href="/login" class="btn" style="margin-right:15px;">Login</a>
