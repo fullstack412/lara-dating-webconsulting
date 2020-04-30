@@ -33,7 +33,7 @@
     <header>
         <div class="ui middle aligned grid container">
             <div class="four wide column">
-                <a href="/"><img src="{{URL::asset('images/logo-white.png')}}" alt="Web Scorpions" /></a>
+                <a href="/"><img src="{{URL::asset('images/logo-webconsuling.png')}}" alt="Web Scorpions" /></a>
             </div>
             <div class="eight wide column">
                 <div class="menu menu-hp">
@@ -406,7 +406,7 @@
     <footer>
         <div class="ui grid center aligned container stackable">
             <div class="sixteen wide column">
-                <a class="logo-footer" href="/"><img src="{{URL::asset('images/logo-web.png')}}" alt="Web Scorpions" /></a>
+                <a class="logo-footer" href="/"><img src="{{URL::asset('images/logo-webconsuling-1.png')}}" alt="UniqueFlirt" /></a>
                 <ul class="footer-links">
                     <li><a href="/members">Members</a></li>
                     <li><a href="/contact">Contact</a></li>
@@ -421,7 +421,7 @@
                 <div class="logo-links">
                     <a href="https://customer.centralpay.net/home/736523b3-437f-45cf-897b-f1fdfa183a07" target="_blank"><img src="{{URL::asset('images/central-pay-logo.png')}}" title="Central Pay" alt="Central Pay"></a>
                 </div>
-                <div class="copyright">Copyright <i class="far fa-copyright"></i> 2020 webscorpions.com</div>
+                <div class="copyright">Copyright <i class="far fa-copyright"></i> 2020 uniqueflirt.com</div>
             </div>
         </div>
     </footer>

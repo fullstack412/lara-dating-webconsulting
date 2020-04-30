@@ -39,7 +39,7 @@ p {
     font-family: Roboto, sans-serif;
     font-weight: 700;
     color: #fff;
-    background-color: #785287;
+    background-color: #c974a3;
     width: auto;
     padding: 10px 30px;
     border-radius: 50px;
@@ -50,7 +50,7 @@ p {
 
 .btn:hover {
     color: #fff;
-    background-color: #6b4978
+    background-color: rgb(208, 132, 238);
 }
 
 .big-btn {
@@ -3260,7 +3260,7 @@ body .register-login-form.text-center h4 {
 
 header {
     padding: 20px 0;
-    background-image: url(/images/header-background.png?d02da5361939e12907365e2915c84b87);
+    background-image: url(/images/background-uniqueflirt.jpg?d02da5361939e12907365e2915c84b87);
     background-repeat: no-repeat;
     background-size: 100%
 }
