@@ -41,8 +41,8 @@
         <div class="content">
             <div class="ui middle aligned grid container stackable">
                 <div class="five wide column">
-                    <img class="logo-web" src="{{URL::asset('images/logo-webconsuling.png')}}" alt="UniqueFlirt" />
-                    <img class="logo-web-white" src="{{URL::asset('images/logo-webconsuling.png')}}" alt="UniqueFlirt" />
+                    <img class="logo-web" src="{{URL::asset('images/uniqueflirt-logo-1.png')}}" alt="UniqueFlirt" />
+                    <img class="logo-web-white" src="{{URL::asset('images/uniqueflirt-logo-1.png')}}" alt="UniqueFlirt" />
                 </div>
                 <div class="four wide column"></div>
                 <div class="seven wide column">

@@ -14,20 +14,27 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', 'HomeController@index');
-Route::get('/privacy', 'HomeController@privacy');
-Route::get('/contact', 'HomeController@contact');
-Route::get('/terms', 'HomeController@terms');
-Route::get('/users-guide', 'HomeController@usersguide');
+Route::get('privacy', 'HomeController@privacy');
+Route::get('contact', 'HomeController@contact');
+Route::get('terms', 'HomeController@terms');
+Route::get('users-guide', 'HomeController@usersguide');
 
 Route::group(['middleware' => ['auth']], function() {
-    Route::get('/members', 'MembersController@index');
+    Route::get('members', 'MembersController@index');
 });
 
-Route::get('/login', ['as' => 'login', 'uses' => 'LoginController@index']);
-Route::post('/login', 'LoginController@checklogin');
-Route::get('/logout', 'LoginController@logout');
-Route::get('/register', 'LoginController@register');
+Route::get('login', ['as' => 'login', 'uses' => 'LoginController@index']);
+Route::post('login', 'LoginController@checklogin');
+Route::get('logout', 'LoginController@logout');
+Route::get('register', 'LoginController@register');
 
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
+
+    Route::get('registeredusers', function() { return view('admin.registeredusers.index');});
+    Route::get('canceledaccounts', function() { return view('admin.canceledaccounts.index');});
+    Route::get('payments', function() { return view('admin.payments.index');});
+    Route::get('upgrades', function() { return view('admin.upgrades.index');});
+    Route::get('paymentblocks', function() { return view('admin.paymentblocks.index');});
+
 });

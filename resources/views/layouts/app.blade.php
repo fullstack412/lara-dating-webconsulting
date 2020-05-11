@@ -37,8 +37,12 @@
             @endif
             <div class="ui middle aligned grid container">
                 <div class="four wide column">
-                    <a href="/"><img src="{{URL::asset('images/logo-webconsuling.png')}}" alt="UniqueFlirt" /></a>
-                </div>
+                                @if (Request::is('/'))
+                    <a href="/"><img src="{{URL::asset('images/uniqueflirt-logo.png')}}" height="46" width="auto" alt="UniqueFlirt" /></a>
+                      @else
+                                <a href="/"><img src="{{URL::asset('images/uniqueflirt-logo-1.png')}}" height="46" width="auto" alt="UniqueFlirt" /></a>
+                                @endif
+                         </div>
                 <div class="eight wide column">
                     @if (Request::is('/'))
                     <div class="menu menu-hp">
@@ -124,7 +128,7 @@
         <footer>
             <div class="ui grid center aligned container stackable">
                 <div class="sixteen wide column">
-                    <a class="logo-footer" href="/"><img src="{{URL::asset('images/logo-webconsuling-1.png')}}" alt="UniqueFlirt" /></a>
+                    <a class="logo-footer" href="/"><img src="{{URL::asset('images/uniqueflirt-logo-1.png')}}" height="46" width="auto" alt="UniqueFlirt" /></a>
                     <ul class="footer-links">
                         <li><a href="/members">Members</a></li>
                         <li><a href="/contact">Contact</a></li>

@@ -39,7 +39,7 @@ p {
     font-family: Roboto, sans-serif;
     font-weight: 700;
     color: #fff;
-    background-color: #c974a3;
+    background: linear-gradient(127deg, #d57bb0, #aa67b2, #d47aaf);
     width: auto;
     padding: 10px 30px;
     border-radius: 50px;
@@ -50,7 +50,7 @@ p {
 
 .btn:hover {
     color: #fff;
-    background-color: rgb(208, 132, 238);
+    background-color: #9a57a8;
 }
 
 .big-btn {
