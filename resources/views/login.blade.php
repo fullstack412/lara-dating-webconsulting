@@ -57,13 +57,6 @@
                             <div class="ui red message">
                                 Wrong combination or the account is inactive
                             </div>
-                            <!-- <div class="alert alert-danger">
-                                <ul>
-                                    @foreach($errors->all() as $error)
-                                        <li>{{ $error }}</li>
-                                    @endforeach
-                                </ul>
-                            </div> -->
                         @endif
                         <form class="ui form" method="POST" action="/login">
                             {{ csrf_field() }}

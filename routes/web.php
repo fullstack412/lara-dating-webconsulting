@@ -27,6 +27,7 @@ Route::get('login', ['as' => 'login', 'uses' => 'LoginController@index']);
 Route::post('login', 'LoginController@checklogin');
 Route::get('logout', 'LoginController@logout');
 Route::get('register', 'LoginController@register');
+Route::post('register', 'LoginController@postregister');
 
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
@@ -36,5 +37,4 @@ Route::group(['prefix' => 'admin'], function () {
     Route::get('payments', function() { return view('admin.payments.index');});
     Route::get('upgrades', function() { return view('admin.upgrades.index');});
     Route::get('paymentblocks', function() { return view('admin.paymentblocks.index');});
-
 });

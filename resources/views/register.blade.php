@@ -51,22 +51,33 @@
                             <h2>Getting started!</h2>
                             <h4>Register Now</h4>
                         </div>
+                        @if (count($errors) > 0)
+                            <div class="ui red message">
+                            {{$errors[0]}}
+                            </div>
+                        @endif
                         <form class="ui form" method="POST" action="/register">
                             {{ csrf_field() }}
                             <div class="field ">
                                 <div class="ui left icon input">
-                                    <input type="text" name="nickname" placeholder="Nickname" value="">
+                                    <input type="text" name="fullname" placeholder="Fullname" value="" required>
+                                    <i class="fas fa-user-tie"></i>
+                            </div>
+                            <div class="field ">
+                                </div>
+                                <div class="ui left icon input">
+                                    <input type="text" name="nickname" placeholder="Nickname" value="" required>
                                     <i class="fas fa-user"></i>
                                 </div>
                             </div>
                             <div class="field ">
                                 <div class="ui left icon input">
-                                    <input type="email" name="email" placeholder="Email" value="">
+                                    <input type="email" name="email" placeholder="Email" value="" required>
                                     <i class="fas fa-envelope"></i>
                                 </div>
                             </div>
-                            <div class="field-two">
-                                <div class="ui selection dropdown ">
+                            <div class="field">
+                                <!--<div class="ui selection dropdown ">
                                     <input type="hidden" name="age" value="">
                                     <i class="fas fa-birthday-cake"></i>
                                     <i class="dropdown icon"></i>
@@ -156,108 +167,66 @@
                                         <div class="item" data-value="99">99</div>
                                         <div class="item" data-value="100">100</div>
                                     </div>
-                                </div>
+                                </div>-->
                                 <div class="ui selection dropdown ">
-                                    <input type="hidden" name="gender" value="">
+                                    <input type="hidden" name="gender" value="" required>
                                     <i class="fas fa-venus-mars"></i>
                                     <i class="dropdown icon"></i>
                                     <div class="default text">Sex</div>
                                     <div class="menu">
-                                        <div class="item" data-value="1">Male</div>
-                                        <div class="item" data-value="2">Female</div>
+                                        <div class="item" data-value="0">Male</div>
+                                        <div class="item" data-value="1">Female</div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="ui selection dropdown looking-for ">
-                                <input type="hidden" name="looking_for" value="">
+                            <!--<div class="ui selection dropdown looking-for ">
+                                <input type="hidden" name="looking_for" value="" >
                                 <i class="fas fa-search"></i>
                                 <i class="dropdown icon"></i>
                                 <div class="default text">Looking for</div>
                                 <div class="menu">
-                                    <div class="item" data-value="1">Male</div>
-                                    <div class="item" data-value="2">Female</div>
+                                    <div class="item" data-value="0">Male</div>
+                                    <div class="item" data-value="1">Female</div>
                                 </div>
-                            </div>
+                            </div>-->
                             <div class="ui selection dropdown looking-for ">
-                                <input type="hidden" name="civil_status" value="">
+                                <input type="hidden" name="marital_status" value="" required>
                                 <i class="fas fa-heart"></i>
                                 <i class="dropdown icon"></i>
-                                <div class="default text">Civil Status</div>
+                                <div class="default text">Marital Status</div>
                                 <div class="menu">
-                                    <div class="item" data-value="1">Single</div>
-                                    <div class="item" data-value="2">Married</div>
-                                    <div class="item" data-value="3">Divorced</div>
-                                    <div class="item" data-value="4">In a Relationship</div>
+                                    <div class="item" data-value="0">Single</div>
+                                    <div class="item" data-value="1">Married</div>
+                                    <div class="item" data-value="2">Divorced</div>
+                                    <div class="item" data-value="3">In a Relationship</div>
                                 </div>
                             </div>
                             <div class="ui selection dropdown looking-for ">
-                                <input type="hidden" name="country_id" value="">
+                                <input type="hidden" name="country_id" value="" required>
                                 <i class="fas fa-globe-americas"></i>
                                 <i class="dropdown icon"></i>
                                 <div class="default text">Country</div>
                                 <div class="menu">
-                                    <div class="item" data-value="1">Albania</div>
-                                    <div class="item" data-value="2">Andorra</div>
-                                    <div class="item" data-value="44">Argentina</div>
-                                    <div class="item" data-value="3">Armenia</div>
-                                    <div class="item" data-value="4">Austria</div>
-                                    <div class="item" data-value="5">Belarus</div>
-                                    <div class="item" data-value="6">Belgium</div>
-                                    <div class="item" data-value="45">Brazilia</div>
-                                    <div class="item" data-value="7">Bulgaria</div>
-                                    <div class="item" data-value="43">Chile</div>
-                                    <div class="item" data-value="8">Croatia</div>
-                                    <div class="item" data-value="9">Cyprus</div>
-                                    <div class="item" data-value="10">Czech Republic</div>
-                                    <div class="item" data-value="11">Denmark</div>
-                                    <div class="item" data-value="12">Estonia</div>
-                                    <div class="item" data-value="13">Finland</div>
-                                    <div class="item" data-value="14">France</div>
-                                    <div class="item" data-value="15">Germany</div>
-                                    <div class="item" data-value="16">Greece</div>
-                                    <div class="item" data-value="17">Hungary</div>
-                                    <div class="item" data-value="18">Iceland</div>
-                                    <div class="item" data-value="19">Ireland</div>
-                                    <div class="item" data-value="20">Italia</div>
-                                    <div class="item" data-value="21">Kazakhstan</div>
-                                    <div class="item" data-value="22">Latvia</div>
-                                    <div class="item" data-value="23">Liechtenstein</div>
-                                    <div class="item" data-value="24">Lithuania</div>
-                                    <div class="item" data-value="25">Luxembourg</div>
-                                    <div class="item" data-value="26">Macedonia</div>
-                                    <div class="item" data-value="27">Malta</div>
-                                    <div class="item" data-value="28">Netherlands</div>
-                                    <div class="item" data-value="29">Norway</div>
-                                    <div class="item" data-value="30">Poland</div>
-                                    <div class="item" data-value="31">Portugal</div>
-                                    <div class="item" data-value="32">Romania</div>
-                                    <div class="item" data-value="33">Russia</div>
-                                    <div class="item" data-value="34">Slovakia</div>
-                                    <div class="item" data-value="35">Slovenia</div>
-                                    <div class="item" data-value="36">Spain</div>
-                                    <div class="item" data-value="37">Sweden</div>
-                                    <div class="item" data-value="38">Switzerland</div>
-                                    <div class="item" data-value="39">Turkey</div>
-                                    <div class="item" data-value="40">Ukraine</div>
-                                    <div class="item" data-value="41">United Kingdom</div>
-                                    <div class="item" data-value="42">United States of America</div>
+                                    @foreach($data['countries'] as $country)
+                                    <div class="item" data-value="{{$country->id}}">{{$country->country_name}}</div>
+                                    @endforeach
                                 </div>
                             </div>
                             <div class="field ">
                                 <div class="ui left icon input">
-                                    <input type="password" name="password" placeholder="Password">
+                                    <input type="password" name="password" placeholder="Password" required>
                                     <i class="fas fa-asterisk"></i>
                                 </div>
                             </div>
                             <div class="field ">
                                 <div class="ui left icon input">
-                                    <input type="password" name="password_confirmation" placeholder="Password">
+                                    <input type="password" name="password_confirmation" placeholder="Confirm Password" required>
                                     <i class="fas fa-asterisk"></i>
                                 </div>
                             </div>
                             <div class="login-settings">
                                 <div class="ui checkbox">
-                                    <input type="checkbox" name="terms-and-conditions">
+                                    <input type="checkbox" name="terms-and-conditions" required>
                                     <label><a href="/terms" target="_blank">I agree with the terms</a></label>
                                 </div>
                             </div>
@@ -298,7 +267,7 @@
             </div>
         </div>
 
-        <div class="ui modal mini" id="callModal">
+        <!--<div class="ui modal mini" id="callModal">
             <input type="hidden" id="fromId" value="" />
             <div class="header text-center">
                 <i class="bell icon purple"></i> <b id="whosCalling">date.aUser</b> is calling you!
@@ -307,7 +276,7 @@
                 <a class="ui red button" id="rejectCall" href="#">Reject</a>
                 <a class="ui green button" id="pickUpCall" href="#">Answer</a>
             </div>
-        </div>
+        </div>-->
     </div>
 
 
