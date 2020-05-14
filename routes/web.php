@@ -21,6 +21,21 @@ Route::get('users-guide', 'HomeController@usersguide');
 
 Route::group(['middleware' => ['auth']], function() {
     Route::get('members', 'MembersController@index');
+    Route::get('search', 'SearchController@index');
+    Route::get('messages', 'ProfileController@messages');
+    Route::get('spam', 'ProfileController@spam');
+    Route::get('universal', 'ProfileController@universal');
+    Route::get('profiles', 'MembersController@index');
+    Route::get('comments', 'MembersController@comments');
+    Route::get('likes', 'MembersController@likes');
+    Route::get('notifications', 'MembersController@notifications');
+    Route::get('friends', 'FriendsController@index');
+    Route::get('view', 'FriendsController@index');
+    Route::get('friend_request', 'FriendsController@friendrequest');
+    Route::get('myprofile', 'ProfileController@index');
+    Route::get('myphotos', 'ProfileController@myphotos');
+    Route::get('myaccount', 'ProfileController@myaccount');
+    Route::get('upgrade', 'ProfileController@upgrade');
 });
 
 Route::get('login', ['as' => 'login', 'uses' => 'LoginController@index']);

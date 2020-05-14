@@ -11,4 +11,19 @@ class MembersController extends Controller
     {
         return view('members');
     }
+
+    function comments()
+    {
+        return view('comments');
+    }
+
+    function likes()
+    {
+        return view('likes');
+    }
+
+    function notifications()
+    {
+        return view('notifications');
+    }
 }

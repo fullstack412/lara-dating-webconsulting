@@ -144,7 +144,7 @@ p {
 
 .menu {
     display: flex;
-    justify-content: space-between
+    justify-content: space-around;
 }
 
 .menu ul {
@@ -3226,7 +3226,7 @@ body .register-login-form.text-center h4 {
 }
 
 .menu ul li .ui.dropdown {
-    padding-right: 40px;
+    
     border-radius: 50px !important;
     box-shadow: 0 5px 20px 0 rgba(0, 0, 0, .06)
 }
