@@ -11,6 +11,11 @@ class ProfileController extends Controller
         return view('myprofile');
     }
 
+    function chats()
+    {
+        return view('chats');
+    }
+
     function messages()
     {
         return view('messages');

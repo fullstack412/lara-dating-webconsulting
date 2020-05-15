@@ -20,6 +20,7 @@ Route::get('terms', 'HomeController@terms');
 Route::get('users-guide', 'HomeController@usersguide');
 
 Route::group(['middleware' => ['auth']], function() {
+    Route::get('chats', 'ProfileController@chats');
     Route::get('members', 'MembersController@index');
     Route::get('search', 'SearchController@index');
     Route::get('messages', 'ProfileController@messages');

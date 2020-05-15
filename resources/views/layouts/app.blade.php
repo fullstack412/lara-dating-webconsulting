@@ -27,6 +27,8 @@
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="msapplication-TileImage" content="{{URL::asset('images/icon/ms-icon-144x144.png')}}">
     <meta name="theme-color" content="#ffffff">
+
+    
 </head>
 
 <body>
@@ -95,6 +97,8 @@
                                 &nbsp;&nbsp;&nbsp;<i class="fas fa-bars"></i>&nbsp;&nbsp;&nbsp;Menu&nbsp;&nbsp;&nbsp;
                                 <i class="fas fa-caret-down"></i>
                                 <div class="menu" style="min-width: 200px; max-height: 600px;">
+                                    <div class="item"><a href="/chats"><i class="fas fa-comments"></i>  Chats</a></div>
+                                    <hr style="border-style: ridge;"/>
                                     <div class="item"><a href="/messages"><i class="fas fa-comments"></i>  Messages</a></div>
                                     <hr style="border-style: ridge;"/>
                                     <div class="item">&nbsp;&nbsp;&nbsp;&nbsp;<a href="/messages">Messages</a></div>
@@ -245,6 +249,8 @@
     <script src="{{URL::asset('fancybox/jquery.fancybox.min.js')}}"></script>
     <script src="{{URL::asset('js/public.bundle.js?v=1588216238')}}"></script>
     <script src="{{URL::asset('js/user.bundle.js?v=1588216238')}}"></script>
+
+    <script src="//{{ Request::getHost() }}:6001/socket.io/socket.io.js"></script>
 </body>
 
 </html>
