@@ -5,8 +5,8 @@
 /vendor
 .env
 .env.backup
-laravel-echo-server.json
-laravel-echo-server.lock
+/laravel-echo-server.json
+/laravel-echo-server.lock
 .phpunit.result.cache
 Homestead.json
 Homestead.yaml
