@@ -1,0 +1,21 @@
+.chat-user {
+  width: 250px;
+  background: #f0f4f8;
+}
+
+.chat-user .list-group {
+  list-style: none;
+}
+
+.chat-user .list-group .list-item {
+  padding: 10px 20px;
+}
+
+.chat-user .list-group .list-item:hover {
+  background: #dcf1fa;
+}
+
+.chat-pannel {
+  width: calc(100% - 270px);
+}
+

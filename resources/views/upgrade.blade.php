@@ -19,7 +19,9 @@
           <li>Profile support</li>
           <li>Numbers of photos</li>
         </ul>
-        <div style="display:flex; justify-content:center;"><button type="button" class="btn btn-lg btn-block btn-outline-primary">Buy</button></div>
+        <div style="display:flex; justify-content:center;">
+          <button type="button" class="btn btn-lg btn-block btn-outline-primary">Buy</button>
+        </div>
       </div>
     </div>
     <div class="card mb-3 shadow-sm">
@@ -39,7 +41,8 @@
           <li>Profile support</li>
           <li>Numbers of photos</li>
         </ul>
-        <div style="display:flex; justify-content:center;"><button type="button" class="btn btn-lg btn-block btn-outline-primary">Sign up for free</button></div>
+        <div style="display:flex; justify-content:center;"><button type="button"
+            class="btn btn-lg btn-block btn-outline-primary">Sign up for free</button></div>
       </div>
     </div>
     <div class="card mb-3 shadow-sm">
@@ -60,7 +63,8 @@
           <li>Profile support</li>
           <li>Numbers of photos</li>
         </ul>
-        <div style="display:flex; justify-content:center;"><button type="button" class="btn btn-lg btn-block btn-outline-primary">Sign up for free</button></div>
+        <div style="display:flex; justify-content:center;"><button type="button"
+            class="btn btn-lg btn-block btn-outline-primary">Sign up for free</button></div>
       </div>
     </div>
     <div class="card mb-3 shadow-sm">
@@ -81,7 +85,8 @@
           <li>Profile support</li>
           <li>Numbers of photos</li>
         </ul>
-        <div style="display:flex; justify-content:center;"><button type="button" class="btn btn-lg btn-block btn-outline-primary">Sign up for free</button></div>
+        <div style="display:flex; justify-content:center;"><button type="button"
+            class="btn btn-lg btn-block btn-outline-primary">Sign up for free</button></div>
       </div>
     </div>
   </div>

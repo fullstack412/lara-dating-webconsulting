@@ -3,45 +3,98 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Routing\Controller;
+use PhpJunior\LaravelVideoChat\Facades\Chat;
+use PhpJunior\LaravelVideoChat\Models\Conversation\Conversation;
 
 class ProfileController extends Controller
 {
-    function index()
+    public function index()
     {
         return view('myprofile');
     }
 
-    function chats()
+    public function allChats()
     {
-        return view('chats');
+        $threads = Chat::getAllConversations();
+
+        return view('chats')->with([
+            'threads' => $threads,
+            'conversation' => null
+        ]);
     }
 
-    function messages()
+    public function chat(Request $request, $id)
+    {
+        $threads = Chat::getAllConversations();
+        $conversation = Chat::getConversationMessageById($id);
+
+        return view('chats')->with([
+            'threads' => $threads,
+            'conversation' => $conversation,
+        ]);
+    }
+
+    public function acceptChat(Request $request, $id)
+    {
+        Chat::acceptMessageRequest($id);
+        return redirect()->back();
+    }
+
+    public function newChat(Request $request, $id)
+    {
+        $conversation = new Conversation();
+        $conversation->first_user_id = auth()->user()->id;
+        $conversation->second_user_id = $id;
+        $conversation->save();
+
+        $conversation->messages()->create([
+            'user_id' => auth()->user()->id,
+            'text' => 'Hello',
+        ]);
+    }
+
+    public function sendChat(Request $request)
+    {
+        Chat::sendConversationMessage($request->input('conversationId'), $request->input('text'));
+    }
+
+    public function sendFilesInChat(Request $request)
+    {
+        Chat::sendFilesInConversation($request->input('conversationId'), $request->file('files'));
+    }
+
+    public function chatTrigger(Request $request, $id)
+    {
+        Chat::startVideoCall($id, $request->all());
+    }
+
+    public function messages()
     {
         return view('messages');
     }
 
-    function spam()
+    public function spam()
     {
         return view('spam');
     }
 
-    function universal()
+    public function universal()
     {
         return view('universal');
     }
 
-    function myphotos()
+    public function myphotos()
     {
         return view('myphotos');
     }
 
-    function myaccount()
+    public function myaccount()
     {
         return view('myaccount');
     }
 
-    function upgrade()
+    public function upgrade()
     {
         return view('upgrade');
     }

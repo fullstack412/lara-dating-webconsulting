@@ -1,7 +1,6 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -11,7 +10,7 @@ use Illuminate\Support\Facades\Route;
 | routes are loaded by the RouteServiceProvider within a group which
 | contains the "web" middleware group. Now create something great!
 |
-*/
+ */
 
 Route::get('/', 'HomeController@index');
 Route::get('privacy', 'HomeController@privacy');
@@ -19,8 +18,15 @@ Route::get('contact', 'HomeController@contact');
 Route::get('terms', 'HomeController@terms');
 Route::get('users-guide', 'HomeController@usersguide');
 
-Route::group(['middleware' => ['auth']], function() {
-    Route::get('chats', 'ProfileController@chats');
+Route::group(['middleware' => ['auth']], function () {
+    Route::get('chats', 'ProfileController@allChats');
+    Route::get('chats/{id}', 'ProfileController@chat')->name('chats');
+    Route::get('chats/accept/{id}', 'ProfileController@acceptChat')->name('chats.accept');
+    Route::post('chats/message/send', 'ProfileController@sendChat');
+    Route::post('chats/message/send/file', 'ProfileController@sendFilesInChat');
+    Route::post('chats/trigger/{id}', 'ProfileController@chatTrigger');
+    Route::get('chats/new/{id}', 'ProfileController@newChat');
+    
     Route::get('members', 'MembersController@index');
     Route::get('search', 'SearchController@index');
     Route::get('messages', 'ProfileController@messages');
@@ -48,9 +54,9 @@ Route::post('register', 'LoginController@postregister');
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
 
-    Route::get('registeredusers', function() { return view('admin.registeredusers.index');});
-    Route::get('canceledaccounts', function() { return view('admin.canceledaccounts.index');});
-    Route::get('payments', function() { return view('admin.payments.index');});
-    Route::get('upgrades', function() { return view('admin.upgrades.index');});
-    Route::get('paymentblocks', function() { return view('admin.paymentblocks.index');});
+    Route::get('registeredusers', function () {return view('admin.registeredusers.index');});
+    Route::get('canceledaccounts', function () {return view('admin.canceledaccounts.index');});
+    Route::get('payments', function () {return view('admin.payments.index');});
+    Route::get('upgrades', function () {return view('admin.upgrades.index');});
+    Route::get('paymentblocks', function () {return view('admin.paymentblocks.index');});
 });

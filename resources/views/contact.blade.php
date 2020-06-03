@@ -14,7 +14,7 @@
         <div class="company-info">
             <div class="company-name">
                 <h3>S.C TWO DATING S.R.L</h3>
-                <img src="{{URL::asset('images/contact-logo.png')}}" alt="Logo" />
+                <img src="{{ URL::asset('images/contact-logo.png') }}" alt="Logo" />
             </div>
             <div class="company-details">
                 <ul>
@@ -25,7 +25,10 @@
                 </ul>
                 <div class="description">
                     <i class="fas fa-info-circle"></i>
-                    <p>Personal data that will be collected through the contact form will be used to make a direct email connection with you. <br>Refusing to use this data makes it impossible to establish a relationship with you</p>
+                    <p>Personal data that will be collected through the contact form will be used to make a direct email
+                        connection with you. <br>Refusing to use this data makes it impossible to establish a
+                        relationship with you
+                    </p>
                 </div>
             </div>
         </div>
@@ -58,7 +61,8 @@
                 </div>
                 <div class="ui checkbox">
                     <input type="checkbox" name="gdpr">
-                    <label>I accept that the above data be used to be contacted by the administrators of this website.</label>
+                    <label>I accept that the above data be used to be contacted by the administrators of this
+                        website.</label>
                 </div>
                 <div class="send-button">
                     <button class="btn big-btn">Send message</button>
